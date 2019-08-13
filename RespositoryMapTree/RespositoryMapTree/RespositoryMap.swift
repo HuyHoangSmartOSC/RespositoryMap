@@ -59,6 +59,12 @@ class RespositoryMap: UIViewController {
             }
         }
     }
+    
+    //  tao duong di cho checkpoint
+    func setWayToCheckpoint() -> [Resporitory] {
+        <#function body#>
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
