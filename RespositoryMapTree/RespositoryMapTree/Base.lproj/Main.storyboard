@@ -25,11 +25,17 @@
                                 <rect key="frame" x="0.0" y="944" width="683" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqT-e4-GQg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXF-Tb-AJY">
                                 <rect key="frame" x="683" y="944" width="683" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Create a respository map"/>
+                                <connections>
+                                    <action selector="createBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LUX-TO-HXr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,6 +56,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jIl-fR-nvQ"/>
                     </view>
+                    <connections>
+                        <outlet property="mainScrollView" destination="FqF-9w-gid" id="hEF-kp-YBt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

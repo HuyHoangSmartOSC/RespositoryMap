@@ -8,16 +8,17 @@
 
 import UIKit
 
-class RespositoryMap: UIViewController {
+class RespositoryMap{
     
     //  mảng các respository trên map
-    var arrayRespository: Array<Resporitory> = Array()
+    var arrayRespository: [Resporitory] = []
     
     //  điểm chạy qua các respository
     var checkpoint: Checkpoint
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    init() {
+        self.arrayRespository = [Resporitory()]
+        self.checkpoint = Checkpoint()
     }
     
     //  sinh ngau nhien mot mang respository
@@ -50,15 +51,16 @@ class RespositoryMap: UIViewController {
     }
     
     //  ve cac respository tren map
-    func drawArrayRespository(arrayIdIndex: [Int]) -> Void {
-        var arrayRespoLabel: [UILabel] = []
-        for i in 0..<arrayIdIndex.count {
+    func drawArrayRespository() -> Void {
+        var arrayLabel: [UILabel] = []
+        
+        for _ in 0..<self.arrayRespository.count {
+            let label = UILabel()
             
-            arrayRespoLabel.append(UILabel())
-            if(self.arrayRespository[i].idBackRespo != nil){
-                
-            }
+            
+            arrayLabel.append(UILabel())
         }
+        
     }
     
     //  tao duong di cho checkpoint
@@ -96,18 +98,18 @@ class RespositoryMap: UIViewController {
         return arrayIdIndex
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        // Do any additional setup after loading the view.
+//    }
     
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
+//
+//    // MARK: - Navigation
+//
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//    }
 }

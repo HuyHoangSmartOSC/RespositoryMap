@@ -21,6 +21,7 @@ class Checkpoint {
         self.idfFistRespo = 0
     }
     init(arrayIdIndex : [Int]) {
+        self.idfFistRespo = 0
         self.arrayIdIndex = arrayIdIndex
     }
 }

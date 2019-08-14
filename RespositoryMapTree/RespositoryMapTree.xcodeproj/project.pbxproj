@@ -104,15 +104,15 @@
 		527EFAB522FBCFF30038056B /* RespositoryMapTree */ = {
 			isa = PBXGroup;
 			children = (
+				520E76FB2302ADFA00BF7FB6 /* RespositoryMap.swift */,
+				5204DAE523014D8E00431DA5 /* CheckPoint.swift */,
+				5204DAE323014B3200431DA5 /* Respository.swift */,
 				527EFAB622FBCFF30038056B /* AppDelegate.swift */,
 				527EFAB822FBCFF30038056B /* ViewController.swift */,
 				527EFABA22FBCFF30038056B /* Main.storyboard */,
 				527EFABD22FBCFF50038056B /* Assets.xcassets */,
 				527EFABF22FBCFF50038056B /* LaunchScreen.storyboard */,
 				527EFAC222FBCFF50038056B /* Info.plist */,
-				5204DAE323014B3200431DA5 /* Respository.swift */,
-				5204DAE523014D8E00431DA5 /* CheckPoint.swift */,
-				520E76FB2302ADFA00BF7FB6 /* RespositoryMap.swift */,
 			);
 			path = RespositoryMapTree;
 			sourceTree = "<group>";
