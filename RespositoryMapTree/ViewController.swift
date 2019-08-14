@@ -38,6 +38,8 @@ class ViewController: UIViewController {
             labelRespo[i].translatesAutoresizingMaskIntoConstraints = false
             if(respoMap.arrayRespository[i].createMethod == 0){
                 NSLayoutConstraint(item: labelRespo[i], attribute: .leading, relatedBy: .equal, toItem: labelRespo[i-1], attribute: .trailing, multiplier: 1.0, constant: 20.0).isActive = true
+            }else {
+                NSLayoutConstraint(item: labelRespo[i], attribute: .top, relatedBy: .equal, toItem: labelRespo[i-1], attribute: .bottom, multiplier: 1.0, constant: 20).isActive = true
             }
         }
 //        for i in 0..<respoMap.arrayRespository.count {
