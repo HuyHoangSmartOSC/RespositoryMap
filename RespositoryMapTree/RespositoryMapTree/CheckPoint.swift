@@ -12,15 +12,15 @@ import Foundation
 class Checkpoint {
     
     //  respository xuất phát của checkpoint
-    let firstRespository: Resporitory = Resporitory()
+    let idfFistRespo: Int
     
     //  chuỗi các respository mà checkpoint sẽ chạy qua
-    var respositoryArray: Array<Resporitory> = Array()
+    var arrayIdIndex: [Int] = []
     
     init() {
-        self.respositoryArray = [self.firstRespository]
+        self.idfFistRespo = 0
     }
-    init(respositoryArray: Array<Resporitory>) {
-        self.respositoryArray = respositoryArray
+    init(arrayIdIndex : [Int]) {
+        self.arrayIdIndex = arrayIdIndex
     }
 }

@@ -50,9 +50,10 @@ class RespositoryMap: UIViewController {
     }
     
     //  ve cac respository tren map
-    func drawArrayRespository() -> Void {
+    func drawArrayRespository(arrayIdIndex: [Int]) -> Void {
         var arrayRespoLabel: [UILabel] = []
-        for i in 0..<arrayRespository.count {
+        for i in 0..<arrayIdIndex.count {
+            
             arrayRespoLabel.append(UILabel())
             if(self.arrayRespository[i].idBackRespo != nil){
                 
@@ -61,8 +62,38 @@ class RespositoryMap: UIViewController {
     }
     
     //  tao duong di cho checkpoint
-    func setWayToCheckpoint() -> [Resporitory] {
-        <#function body#>
+    func setWayToCheckpoint() -> [Int] {
+        
+        //  mang id cac respo checkpoint di qua
+        var arrayIdIndex: [Int] = []
+        arrayIdIndex.append(0)
+        
+        for var index in 0..<self.arrayRespository.count {
+            
+            //  neu arrayRespository[i] co sinh ra mot respo moi thi tim cac respo con cua no
+            if(self.arrayRespository[index].isCreateNewRespo == true){
+                var arrayTarget: [Int] = []
+                for i in index+1..<self.arrayRespository.count {
+                    if(self.arrayRespository[i].idBackRespo == index){
+                        arrayTarget.append(i)
+                    }
+                }
+                
+                //  chon respo tiep theo checkpoint chay qua
+                if(arrayTarget.count == 2){
+                    let method = Int.random(in: 0...1)
+                    for j in 0..<arrayTarget.count {
+                        if(self.arrayRespository[arrayTarget[j]].createMethod == method){
+                            index = arrayTarget[j] // chuyen vi tri checkpoint den respo moi
+                        }
+                    }
+                }else{
+                    index = arrayTarget[0]
+                }
+                arrayIdIndex.append(index)
+            }
+        }
+        return arrayIdIndex
     }
     
     override func viewDidLoad() {
